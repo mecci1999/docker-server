@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql_server
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: leo19870624
+      MYSQL_DATABASE: darwin_app
+      MYSQL_USER: darwin
+      MYSQL_PASSWORD: darwin19990709
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"

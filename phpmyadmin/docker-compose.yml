@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: 0.0.0.0
+      PMA_PORT: 3306
+      PMA_USER: darwin
+      PMA_PASSWORD: darwin19990709
