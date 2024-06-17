@@ -10,6 +10,8 @@ services:
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
     restart: always
+    environment:
+      - HOST_DOCKER_INTERNAL=host.docker.internal
 
   grafana:
     image: grafana/grafana:latest
@@ -18,6 +20,8 @@ services:
     volumes:
       - grafana_data:/var/lib/grafana
     restart: always
+    environment:
+      - HOST_DOCKER_INTERNAL=host.docker.internal
 
 volumes:
   grafana_data:
